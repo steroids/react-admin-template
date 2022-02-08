@@ -1,0 +1,25 @@
+// eslint-disable import/no-dynamic-require
+
+export default {
+    create: require('@fortawesome/fontawesome-free/svgs/solid/plus-square.svg'),
+    update: require('@fortawesome/fontawesome-free/svgs/solid/pen-square.svg'),
+    delete: require('@fortawesome/fontawesome-free/svgs/solid/trash.svg'),
+    view: require('@fortawesome/fontawesome-free/svgs/solid/eye.svg'),
+    accept: require('@fortawesome/fontawesome-free/svgs/solid/check-circle.svg'),
+    'angle-double-left': require('@fortawesome/fontawesome-free/svgs/solid/angle-double-left.svg'),
+    'angle-double-right': require('@fortawesome/fontawesome-free/svgs/solid/angle-double-right.svg'),
+    'angle-left': require('@fortawesome/fontawesome-free/svgs/solid/angle-left.svg'),
+    'angle-right': require('@fortawesome/fontawesome-free/svgs/solid/angle-right.svg'),
+    reject: require('@fortawesome/fontawesome-free/svgs/solid/times-circle.svg'),
+    back: require('@fortawesome/fontawesome-free/svgs/solid/arrow-left.svg'),
+    file: require('@fortawesome/fontawesome-free/svgs/solid/file.svg'),
+    'file-image': require('@fortawesome/fontawesome-free/svgs/solid/file-image.svg'),
+    plus: require('@fortawesome/fontawesome-free/svgs/solid/plus.svg'),
+    securityEye: require('@fortawesome/fontawesome-free/svgs/solid/eye.svg'),
+    times: require('@fortawesome/fontawesome-free/svgs/solid/times.svg'),
+    trash: require('@fortawesome/fontawesome-free/svgs/solid/trash.svg'),
+    securityEyeSlash: require('@fortawesome/fontawesome-free/svgs/solid/eye-slash.svg'),
+    upload: require('@fortawesome/fontawesome-free/svgs/solid/upload.svg'),
+    'calendar-alt': require('@fortawesome/fontawesome-free/svgs/solid/calendar-alt.svg'),
+    'times-circle': require('@fortawesome/fontawesome-free/svgs/solid/times-circle.svg'),
+};

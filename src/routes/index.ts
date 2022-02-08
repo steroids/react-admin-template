@@ -1,4 +1,5 @@
 import {IRouteItem} from '@steroidsjs/core/ui/nav/Router/Router';
+
 import IndexPage from './IndexPage';
 import userRoutes from './users/userRoutes';
 
@@ -15,14 +16,14 @@ export default {
     label: __('Admin index page'),
     items: {
         [ROUTE_USERS]: {
-            path: baseUrl + '/users',
+            path: '/admin/users',
             exact: true,
             label: __('Пользователи'),
             redirectTo: true,
             models: 'app.user.models.User',
             items: [
                 userRoutes,
-            ]
+            ],
         },
-    }
+    },
 } as IRouteItem;

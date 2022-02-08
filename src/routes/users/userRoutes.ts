@@ -6,7 +6,7 @@ export const ROUTE_USERS_USERS = 'users_users';
 export default generateCrud(ROUTE_USERS_USERS, {
     label: __('Пользователи'),
     model: 'app.user.models.User',
-    path: '/admin/users/users',
+    path: '/admin/users',
     restUrl: '/api/v1/admin/auth',
     searchModel: 'app.user.forms.UserAdminSearchForm',
     models: [
@@ -57,5 +57,5 @@ export default generateCrud(ROUTE_USERS_USERS, {
             icon: 'key',
             component: AuthLogins,
         },
-    }
+    },
 });
