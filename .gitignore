@@ -1,52 +1,13 @@
-# phpstorm project files
-/.idea/*
-/.idea/workspace.xml
-/.idea/modules.xml
-/.idea/*.iml
-/.idea/dictionaries/
-/.idea/dataSources.*
-/.idea/libraries/
-/.idea/jsLibraryMappings.xml
-.idea/dataSources/*
-.idea/php.xml
-.idea/misc.xml
-.idea/deployment.xml
-jshint.xml
-.idea/jsLinters/jshint.xml
-/.idea/inspectionProfiles/*
-
-
-# windows thumbnail cache
-# windows thumbnail cache
-Thumbs.db
-
-# Mac DS_Store Files
+.cache-loader
+/.idea
+*.dump
 .DS_Store
-
-# composer itself is not needed
-composer.phar
-
-# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
-
-/config.php
-/config.js
-
-public/bundle-all.js
-public/stats.json
-public/index-lang.json
-public/app/frontend
-/node_modules
-/mobile/node_modules
-/vendor
-/files
-/files/log
-/steroids/*
-!/steroids/_npm/README.md
-
+Thumbs.db
+node_modules
 !.gitempty
-
-dev/userstory
-/.cache-loader
 /.env
+yarn-error.log
+
+public/assets
+public/index-lang.json
+public/frontend
