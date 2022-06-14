@@ -4,35 +4,48 @@ stages:
 
 variables:
   DEV_DEPLOY_DIR: '/var/host/www/$CI_PROJECT_NAMESPACE-$CI_PROJECT_NAME/www-$CI_COMMIT_REF_NAME'
-  VENDOR_DIRS: 'node_modules'
-  EXCLUDE_DIRS: '.git .idea node_modules tests'
 
-before_script:
-  - for DIR in $VENDOR_DIRS; do mkdir -p ../$DIR && rm -rf $DIR && mv ../$DIR .; done
-
-after_script:
-  - for DIR in $VENDOR_DIRS; do mv $DIR/ ../; done
-
-build:
+.build:
   stage: build
-  only:
-    - master
-    - prod
+  cache:
+    paths:
+      - node_modules
   artifacts:
     paths:
-      - public/*.*
-      - public/admin/*.*
+      - public/
+  only:
+    - master
   script:
     - yarn
     - env > .env
+    #    - export APP_SENTRY_DSN="REPLACE_WITH_REAL_SENTRY_DSN"
     - node webpack production
     - echo "$CI_COMMIT_REF_NAME-$CI_JOB_ID" > $CI_PROJECT_DIR/public/version.txt
 
-deploy_dev:
+build_dev:
+  extends: .build
+  only:
+    - master
+  variables:
+    APP_ENV: preview
+    APP_BACKEND_URL: https://boilerplateadmin12345.kozhin.dev
+
+deploy:
   stage: deploy
   only:
-    - dev
     - master
+    - stage
+  tags:
+    - dev-server
+  variables:
+    GIT_STRATEGY: none
   script:
-    - ssh root@dev "mkdir -p $DEV_DEPLOY_DIR"
-    - printf "%s\n" $EXCLUDE_DIRS > ../.rsync-exclude && rsync -rzak --exclude-from=../.rsync-exclude $CI_PROJECT_DIR/ root@dev:$DEV_DEPLOY_DIR
+    - echo "$CI_PROJECT_DIR"
+    - echo "$DEV_DEPLOY_DIR"
+    - mkdir -p $DEV_DEPLOY_DIR
+    - rsync
+      --recursive
+      --delete
+      --verbose
+      --human-readable
+      $CI_PROJECT_DIR/ $DEV_DEPLOY_DIR

@@ -16,7 +16,7 @@ export default {
     label: __('Admin index page'),
     items: {
         [ROUTE_USERS]: {
-            path: '/admin/users',
+            path: baseUrl + '/users',
             exact: true,
             label: __('Пользователи'),
             redirectTo: true,

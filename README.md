@@ -1,12 +1,46 @@
-# Admin repository on @steroidsjs
 
-### Installation:
+# Boilerplate-Admin-12345
 
-1. Copy `./.example.env` to `./.env` and set `APP_BACKEND_URL` to your backend's url
-2. (optional) Replace content of this file (`./README.md`) with your project's specific readme
+## Развертывание нового приложения на основе boilerplate
 
-### Docs & examples
+### 1. Скопировать в отдельную папку всё содержимое, кроме папки .git
+### 2. Заменить временные строки
 
-Sample routes file is in `/src/routes/users/userRoutes.ts`
+Во всем проекте, включая этот файл, замени с учетом регистра на имя проекта:
 
-See other projects for more examples
+1. Для человеко-понятного названия: `Boilerplate-Admin-12345`
+2. Для короткого названия, для ссылок: `boilerplateadmin12345`
+
+### 3. Добавить проект в новый репозиторий
+
+### 4. Удалить раздел "Развертывание нового приложения на основе boilerplate" из этого README.md
+
+## Установка и запуск
+
+Скопировать `./.example.env` в `./.env` и установить там переменную `APP_BACKEND_URL` на значение URL'а бэкенда
+
+### Установка
+
+Выполнить `yarn`
+
+### Запуск webpack сервера
+
+1. Выполнить `yarn watch`
+2. Открыть http://localhost:9991/
+
+### Включение eslint в IDE
+
+Для WebStorm/PhpStorm идем в `Настройки` -> `Langiages & Frameworks` -> `Code Quality Tools` -> `ESLint`
+
+И включаем там пункты `Automatic ESLing configuration` и `Run eslint --fix on save`
+
+### Настройка обработчика ошибок Sentry
+
+1. Создать проект в Sentry
+2. В файле `.gitlab-ci.yml` заменить `REPLACE_WITH_REAL_SENTRY_DSN` на верный dsn и раскомментировать строку
+
+## Примеры
+
+Для примера создан раздел с пользователями `/src/routes/users/userRoutes.ts`
+
+Для других примеров обращайтесь к существующим проектам

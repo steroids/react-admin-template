@@ -10,7 +10,7 @@ export default function Application() {
         routes: () => require('./routes').default,
         layoutView: () => require('./shared/Layout').default,
         layoutProps: {
-            title: 'Template Admin Area',
+            title: 'Boilerplate-Admin-12345',
         },
         screen: true,
         components: {
