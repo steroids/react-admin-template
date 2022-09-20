@@ -1,4 +1,5 @@
 @import './base';
-@import './bootstrap/bootstrap';
-@import './fonts';
 @import './variables';
+@import './bootstrap';
+@import './fonts';
+@import '~@steroidsjs/admin/index';

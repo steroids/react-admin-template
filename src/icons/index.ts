@@ -22,4 +22,7 @@ export default {
     upload: require('@fortawesome/fontawesome-free/svgs/solid/upload.svg'),
     'calendar-alt': require('@fortawesome/fontawesome-free/svgs/solid/calendar-alt.svg'),
     'times-circle': require('@fortawesome/fontawesome-free/svgs/solid/times-circle.svg'),
+    'long-arrow-alt-up': require('@fortawesome/fontawesome-free/svgs/solid/long-arrow-alt-up.svg'),
+    'long-arrow-alt-down': require('@fortawesome/fontawesome-free/svgs/solid/long-arrow-alt-down.svg'),
+    key: require('@fortawesome/fontawesome-free/svgs/solid/key.svg'),
 };

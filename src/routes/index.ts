@@ -1,29 +1,33 @@
 import {IRouteItem} from '@steroidsjs/core/ui/nav/Router/Router';
-
+import Login from '@steroidsjs/admin/shared/Login';
 import IndexPage from './IndexPage';
 import userRoutes from './users/userRoutes';
 
 export const ROUTE_ROOT = 'root';
-export const ROUTE_USERS = 'users';
 
+const roles = ['admin'];
 const baseUrl = '/admin';
 
 export default {
     id: ROUTE_ROOT,
+    roles,
     exact: true,
     path: '/(admin)?',
     component: IndexPage,
     label: __('Admin index page'),
-    items: {
-        [ROUTE_USERS]: {
-            path: baseUrl + '/users',
-            exact: true,
-            label: __('Пользователи'),
-            redirectTo: true,
-            models: 'app.user.models.User',
-            items: [
-                userRoutes,
-            ],
+    items: [
+        userRoutes,
+        {
+            id: 'login',
+            path: baseUrl + '/login',
+            component: Login,
+            componentProps: {
+                loginUrl: '/api/v1/admin/auth/login',
+            },
+            role: 'login',
+            roles: [null],
+            layout: false,
+            isNavVisible: false,
         },
-    },
+    ],
 } as IRouteItem;

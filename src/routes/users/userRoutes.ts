@@ -1,9 +1,9 @@
 import {generateCrud} from '@steroidsjs/core/ui/crud';
 import AuthLogins from '@steroidsjs/admin/auth/AuthLogins';
 
-export const ROUTE_USERS_USERS = 'users_users';
+export const ROUTE_USERS = 'users';
 
-export default generateCrud(ROUTE_USERS_USERS, {
+export default generateCrud(ROUTE_USERS, {
     label: __('Пользователи'),
     model: 'app.user.models.User',
     path: '/admin/users',
@@ -19,14 +19,6 @@ export default generateCrud(ROUTE_USERS_USERS, {
             'name',
             'email',
             'role',
-            {
-                attribute: 'createTime',
-                sortable: true,
-            },
-            {
-                attribute: 'lastLogin',
-                sortable: true,
-            },
         ],
         searchForm: {
             layout: 'table',

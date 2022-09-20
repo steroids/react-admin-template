@@ -1,2 +1,45 @@
 .Layout {
+
+  &__header {
+    z-index: 10;
+  }
+
+  &__sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 330px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    overflow: auto;
+    padding-top: 20px;
+
+    .TreeView__item-label {
+      background-color: transparent;
+    }
+  }
+
+  &__content {
+    min-height: 100vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &_full-page {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    .row {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  .Layout {
+    .col-md-10 {
+      max-width: 75%;
+    }
+  }
 }

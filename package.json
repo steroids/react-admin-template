@@ -9,9 +9,10 @@
     "build": "node webpack production"
   },
   "dependencies": {
+    "@sentry/react": "^6.18.2",
     "@steroidsjs/admin": "2.1.0-beta.4",
-    "@steroidsjs/bootstrap": "^2.1.18",
-    "@steroidsjs/core": "^2.2.78",
+    "@steroidsjs/bootstrap": "^2.1.19",
+    "@steroidsjs/core": "^2.2.89",
     "@steroidsjs/eslint-config": "^2.0.1",
     "@steroidsjs/webpack": "^2.2.1",
     "@types/react": "^17.0.2",
