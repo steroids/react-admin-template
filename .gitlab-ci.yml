@@ -16,7 +16,7 @@ variables:
   only:
     - master
   script:
-    - yarn
+    - yarn install --production
     - env > .env
     #    - export APP_SENTRY_DSN="REPLACE_WITH_REAL_SENTRY_DSN"
     - node webpack production
