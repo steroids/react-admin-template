@@ -40,6 +40,14 @@
 2. В файле `.gitlab-ci.yml` заменить `REPLACE_WITH_REAL_SENTRY_DSN` на верный dsn и раскомментировать строку
 3. Для локальной разработки добавить в `.env` запись `APP_SENTRY_DSN` с верным dsn
 
+## CI/CD
+
+### Настройка выгрузки Gitlab
+
+1. Скопировать файл `.gitlab-ci.sample.yml` в `.gitlab-ci.yml`
+2. Файл `.gitlab-ci.yml` проверить на корректность и, при необходимости, исправить
+
+
 ## Примеры
 
 Для примера создан раздел с пользователями `/src/routes/users/userRoutes.ts`
